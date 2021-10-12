@@ -1,14 +1,19 @@
 import * as React from "react";
-import { useState } from "react";
-import { Container } from "../styles/Container.styled";
-import { Header } from "../styles/Header.styled";
-import { Ul } from "../styles/Ul.styled";
+import { useState, useEffect } from "react";
+const { Container } = require("../styles/Container.styled");
+const { Header } = require("../styles/Header.styled");
+const { Ul } = require("../styles/Ul.styled");
 import Mole from "../components/Mole";
-import { useEffect } from "react";
+
+export interface IState {
+  count: number;
+  start: boolean;
+  setCount: (count: number) => void;
+}
 
 const IndexPage = () => {
-  const [start, setStart] = useState(false);
-  const [count, setCount] = useState(0);
+  const [start, setStart] = useState<IState["start"]>(false);
+  const [count, setCount] = useState<IState["count"]>(0);
 
   useEffect(() => {
     if (start) setCount(0);
