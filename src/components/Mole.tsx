@@ -1,12 +1,12 @@
 import * as React from "react"
 import { useEffect, useState } from "react";
 import mole from "../images/mole.png"
-import {IState as Props} from "../pages/index"
+import {IStates as Props} from "../pages/index"
 
 const Mole: React.FC<Props> = ({count, start, setCount}) => {
   const [t, setT] = useState(0);
 
-  const timeout = () => Math.round(Math.random() * (2000 - 200) + 500);
+const timeout = () => Math.round(Math.random() * (2000 - 200) + 500);
 
   useEffect(() => {
     if (start && t === 0) {

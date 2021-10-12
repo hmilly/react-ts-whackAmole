@@ -25,7 +25,7 @@ export const Ul = styled.ul`
       left: 22px;
     }
     img:hover {
-      cursor: pointer;
+      cursor: not-allowed;
     }
     span {
       font-size: 90px;
